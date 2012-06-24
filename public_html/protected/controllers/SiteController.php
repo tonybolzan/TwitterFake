@@ -47,7 +47,32 @@ class SiteController extends Controller {
         ));
     }
     
-    public function actionPesquisa($q) {
+    public function actionPesquisar() {
+        if(Yii::app()->request->isPostRequest and isset($_POST['search'])) {
+            $q = $_POST['search'];
+            $this->layout = '//layouts/logged';
+
+            $modelPost = new Post('insert');
+
+            $user = User::model()->findByPk(Yii::app()->user->getId());
+            $post = Post::model()->getTweets($q);
+
+            $this->render('pesquisar', array(
+                'modelPost' => $modelPost,
+                'seguindo' => $user->getSeguindo(),
+                'seguido' => $user->getSeguidoPor(),
+                'img' => "http://www.gravatar.com/avatar/" . md5(strtolower(trim($user->email))) . "?d=mm&s=128",
+                'name' => $user->fullname,
+                'username' => $user->username,
+                'bio' => $user->bio,
+                'location' => $user->location,
+                'url' => $user->url,
+                'tweets' => $post,
+                'pesquisa' => $q,
+            ));
+        } else {
+            throw new CHttpException('400','Pagina não existente');
+        }
 
     }
 

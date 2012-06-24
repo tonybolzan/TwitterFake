@@ -17,9 +17,22 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-search pull-right" action="">
-                    <input type="text" class="search-query span3" placeholder="Buscar">
-                </form>
+                <?php
+                $form = $this->beginWidget('CActiveForm', array(
+                    'id' => 'search-form',
+                    'action'=> array('pesquisar'),
+                    'enableClientValidation' => true,
+                    'clientOptions' => array(
+                        'validateOnSubmit' => true,
+                    ),
+                    'htmlOptions' => array(
+                        'class' => 'navbar-search pull-right'
+                    ),
+                ));
+                
+                echo CHtml::textField('search', '', array('class'=>'search-query span3','required' => 'required','placeholder'=>'Buscar'));
+
+                $this->endWidget(); ?>
             </div><!-- /.nav-collapse -->
         </div>
     </div>

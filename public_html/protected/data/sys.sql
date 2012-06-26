@@ -29,7 +29,9 @@ CREATE TABLE "post" (
     FOREIGN KEY(id_user) REFERENCES user(id)
 );
 
-INSERT INTO "user" VALUES(1,'tonybolzan','tonybolzan@gmail.com','2b652946c029ac0adbf854f97eca8cf4','4fb9612a9d5e95.92878127','Tonin R. Bolzan','Acadêmico de Sistemas de Informação','Santa Maria - RS','http://tonybolzan.com');
+-- Senha admin
+-- User  admin
+INSERT INTO "user" VALUES(1,'admin','admin@admin.com','2b652946c029ac0adbf854f97eca8cf4','4fb9612a9d5e95.92878127','Administrador','Administrador do Sistemas TwitterFake','Exemplo - EX','http://exemplo.com');
 
 
 COMMIT;

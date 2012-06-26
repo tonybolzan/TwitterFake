@@ -1,0 +1,19 @@
+TRABALHO FINAL DE PHP
+Desenvolver um serviço que permita aos usuários o envio de mensagens curtas (até 139
+caracteres, tipo o Twitter).
+
+O serviço deverá possuir as seguintes características:
+- Cadastro de Usuários - novos usuários poderão se cadastrar escolhendo um usuário e uma senha.
+
+- Sistema de Login - o sistema deverá diferenciar entre usuários registrados e não registrados
+
+- Postagem de Mensagens - um usuário cadastrado poderá postar uma mensagem curta (até 139 caracteres) que poderá ser vista na sua própria página ou por pessoas que estejam “seguindo” esse usuário.
+
+- Seguir Usuários - um usuário cadastrado poderá seguir um outro usuário cadastrado.
+    Caso opte por fazer isso, todas as novas mensagens do usuário que está sendo seguido aparecerão na página do usuário que está seguindo.
+
+- Acompanhar usuários - qualquer pessoa poderá acessar a lista de mensagens postadas por um usuário cadastrado.
+    Para isso basta acessar o endereço da página do usuário
+
+- Busca de mensagens - qualquer pessoa poderá realizar uma busca por uma palavra chave nas mensagens postadas.
+A busca deverá retornar tanto a mensagem quanto o usuário que postou essa mensagem.

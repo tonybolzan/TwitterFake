@@ -3,9 +3,7 @@
 <div class="row">
     <div class="span12">
         <div class="well well-small well-center profile-card clearfix">
-            <a href="" target="_blank">
-                <img src="<?php echo $img; ?>" class="avatar size128">
-            </a>
+            <img src="<?php echo $img; ?>" class="avatar size128">
             <div>
                 <h1 class="fullname">
                     <?php echo $name; ?>

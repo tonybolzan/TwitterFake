@@ -12,6 +12,7 @@ class User extends BaseUser {
         $criteria = New CDbCriteria();
         $criteria->compare('id_user', $this->id,false,'OR');
         $criteria->compare('id_user', $this->getFollowers(),false,'OR');
+        $criteria->order = 'date DESC';
         $posts = Post::model()->findAll($criteria);
         
         $tweets = array();
